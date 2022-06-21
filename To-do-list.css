@@ -19,6 +19,7 @@ body {
   background-attachment: fixed;
   height: 100%;
 }
+
 #todos {
   color: white;
   padding: 20px;
@@ -144,9 +145,12 @@ body {
   }
 }
 
-.mr-sm-2 {
-  padding-left: 10px;
-  margin-top: 0.5%;
-  height: 30px;
-  width: 800px;
+#searchbar {
+  width: 50%;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid black;
+  margin-left: 450px;
+  margin-bottom: 12px;
+  margin-top: 50px;
 }

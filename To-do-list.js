@@ -89,18 +89,16 @@ function deleteAllElements() {
   input.value = "";
 }
 
-let searchtextbox = document.getElementById("searchtextbox");
-searchtextbox.addEventListener("input", function () {
-  let itemList = document.querySelectorAll(".todo-list-container");
-  Array.from(itemList).forEach(function (item) {
-    let searchedText = item.getElementsByTagName("")[0].innerText;
+function todosearch() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName("todo-item  ");
 
-    let searchTextBoxVal = searchtextbox.value;
-    let re = new RegExp(searchTextBoxVal, "gi");
-    if (searchedText.match(re)) {
-      item.style.display = "block";
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
     } else {
-      item.style.display = "none";
+      x[i].style.display = "todo-item";
     }
-  });
-});
+  }
+}

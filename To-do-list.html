@@ -14,15 +14,12 @@
   </head>
   <body>
     <header>
-      <div class="form-inline" id="searchbar" style="text-align: center">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search tasks here"
-          aria-label="Search"
-          id="searchtextbox"
-        />
-      </div>
+      <input
+        type="text"
+        id="searchbar"
+        onkeyup="todosearch()"
+        placeholder="Search for to do"
+      />
     </header>
     <div id="todos">
       <div class="heading">
