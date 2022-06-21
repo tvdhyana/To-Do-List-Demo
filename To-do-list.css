@@ -9,8 +9,8 @@ body {
   background: rgb(193, 62, 62);
   background: linear-gradient(
     139deg,
-    rgba(193, 62, 62, 1) 0%,
-    rgba(230, 179, 50, 1) 100%
+    rgb(190, 87, 169) 0%,
+    rgb(219, 165, 27) 100%
   );
   overflow-x: hidden;
   background-repeat: no-repeat;
@@ -80,4 +80,73 @@ body {
 #todos > .todo-input-container > .add-item:nth-child(2) {
   right: 40px;
   background-color: rgb(233, 153, 61);
+}
+#todos > .todo-list-container {
+  list-style: none;
+  margin: 10px 0 0;
+}
+#todos > .todo-list-container .todo-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#todos > .todo-list-container .todo-list .todo-item {
+  width: 100%;
+  background-color: white;
+  color: black;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button {
+  position: absolute;
+  right: 0;
+}
+#todos > .todo-list-container .todo-list .button button {
+  width: 40px;
+  height: 50px;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button .completed {
+  background-color: #3ec282;
+}
+#todos > .todo-list-container .todo-list .button .trash {
+  background-color: #e72727;
+}
+
+#todos > .todo-list-container .todo-list .button button i {
+  pointer-events: none;
+}
+.fall {
+  opacity: 0 !important;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+.line_through {
+  text-decoration: line-through;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.editBtn {
+  background-color: rgb(86, 62, 193);
+}
+
+@media screen and (max-width: 600px) {
+  #todos {
+    width: 100%;
+  }
+}
+
+.mr-sm-2 {
+  padding-left: 10px;
+  margin-top: 0.5%;
+  height: 30px;
+  width: 800px;
 }
